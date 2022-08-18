@@ -1,4 +1,4 @@
-Art style: 2d topdown rouguelike, or isometric
+Art style: 2d isometric rouguelike, or topdown. leaning towards isometric
 
 Basic concept: 
     calm and relaxing game or occasionally terrifying
