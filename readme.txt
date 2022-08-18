@@ -9,6 +9,7 @@ Basic concept:
     Boss rooms can be accessed with special keys (needs to be an intentional fight)
         Bosses will be much harder 
     only way to leave a dungeon is an extraction eagle
+    maybe add a gear crafting mechanic??
 Little details:
     Lots of inventory space / weight for extended runs in the dungeon
     loot will be dropped from mobs and found in chests
