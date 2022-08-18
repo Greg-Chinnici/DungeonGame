@@ -1,4 +1,5 @@
 #weapons and armor for dungeon game, will convert to C# later, or i could put it into a csv file. idk
+#    https://www.fantasynamegenerators.com/dungeons-and-dragons.php 
 
 
 
