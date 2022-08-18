@@ -1,6 +1,6 @@
 
 2d topdown rouguelike, or isometric
-Basic concept: mostly looting, easy fights, can be a clam and relaxing game or occasionally terrifying
+Basic concept: mostly looting, easy fights, can be a calm and relaxing game or occasionally terrifying
 Treasure room to store trophies and loot
 Cost currently to enter the dungeon
 Loot can be sold for a fixed price, so I need a vendor
