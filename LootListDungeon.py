@@ -10,6 +10,7 @@ trophies = {#its no buff for now, some can be just aesthetic though
 }
 #{name: value}
 coins = {"copper": 1,"silver": 5, "gold": 10}
+#! loot will get better in the lists, higher index == stronger item
 #{name: [durability, damage dealt, range, [attributes ("enchants will be  random")]]}
 weapons = {
         "axe": [500, 10, 2, [None]],
