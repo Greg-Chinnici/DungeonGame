@@ -11,6 +11,7 @@ Basic concept:
     only way to leave a dungeon is an extraction eagle
 Little details:
     Lots of inventory space / weight for extended runs in the dungeon
+    loot will be dropped from mobs and found in chests
     The farther you go from the start == better loot, or loot just scales with playtime / level
     Lose everything If you die in the dungeon, maybe an insurance system???
     It’ll be like Tarakov and a Dungeon game combined
