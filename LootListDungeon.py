@@ -36,3 +36,8 @@ legplate = {
 shoes = {
     
 }
+#{name: [effects]}
+potions = {
+    "minor healing": [None],
+    "major healing": [None],
+}
