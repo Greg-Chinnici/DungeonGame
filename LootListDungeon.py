@@ -10,8 +10,8 @@ trophies = {#its no buff for now, some can be just aesthetic though
 }
 #{name: MobToFarm}
 bossKeys = {#keys are very rare drops
-    "Ares": ["any Greek them mob],
-    "Neptune": ["any water type mob],
+    "Ares": ["any Greek them mob"],
+    "Neptune": ["any water type mob"],
     "Wendigo": ["mobs killed at night / dark places"],
     "Yeti": ["any ice type mob"],
     "Loviatar": ["water type mobs],
