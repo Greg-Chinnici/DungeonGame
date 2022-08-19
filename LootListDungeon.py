@@ -8,6 +8,16 @@ trophies = {#its no buff for now, some can be just aesthetic though
     "cup of demons blood": [None],
     "orc shahman's head": [None]
 }
+#{name: MobToFarm}
+bossKeys = {#keys are very rare drops
+    "Ares": ["any Greek them mob],
+    "Neptune": ["any water type mob],
+    "Wendigo": ["mobs killed at night / dark places"],
+    "Yeti": ["any ice type mob"],
+    "Loviatar": ["water type mobs],
+    "Ogre King": ["chest loot"]
+}
+
 #{name: value}
 coins = {"copper": 1,"silver": 5, "gold": 10}
 #! loot will get better in the lists, higher index == stronger item
