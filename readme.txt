@@ -28,3 +28,6 @@ Level generation: (each level is its own screen, not continueous walking) #! not
     combine the outlines of multiple shapes, then distribute the room items (chests, loot, spawners)
     every room will have at least 3 exits 
     minimap will show the layout and room items
+    
+    OR use Cellular Automata, Preferred 
+        http://pixelenvy.ca/wa/ca_cave.html
