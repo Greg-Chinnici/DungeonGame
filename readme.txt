@@ -26,6 +26,7 @@ Types of Monsters:
     they can eb accessed by finding a theme seal
     rooms in a regular dungeon will be themed randomly
 Level generation: (each level is its own screen, not continueous walking) #! not finalized
+    Tile based generation
     https://donjon.bin.sh/
     combine the outlines of multiple shapes, then distribute the room items (chests, loot, spawners)
     every room will have at least 3 exits 
