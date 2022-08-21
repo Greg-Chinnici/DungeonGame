@@ -32,5 +32,7 @@ Level generation: (each level is its own screen, not continueous walking) #! not
     every room will have at least 3 exits 
     minimap will show the layout and room items
     
+    it will pixelize the angles that are not in cardinal directions, making it possible to ad the walls and such to be right angles
+    
     OR use Cellular Automata, Preferred 
         http://pixelenvy.ca/wa/ca_cave.html
