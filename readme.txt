@@ -1,4 +1,5 @@
 Art style: isometric rouguelike, or 2d topdown. leaning towards isometric. pixel art / cell shading, similar to terraria
+    3d to pixel art render comp https://www.youtube.com/watch?v=1FrIBkuq0ZI
 
 Basic concept: 
     calm and relaxing game or occasionally terrifying
