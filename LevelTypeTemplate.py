@@ -1,5 +1,6 @@
 
 #could also make the walls differnt depinding on the color, (brick mortar chnage, vines, cracks, )
+#floor will be dotted with the wall color randomly
 class Level():
     def __init__(self, floorColor, ridgeColor, wallColor, tier):
         self.floorColor = floorColor
@@ -31,6 +32,7 @@ PERU = [205,133,63]
 
 YELLOW = [255,255,102]
 KHAKI = [240,230,140]
+LIGHTSAND = [255,235,205]
 
 GREEN = [0,128,0]
 LAWNGREEN = [124,252,0]
@@ -39,6 +41,7 @@ SEAGREEN = [46,139,87]
 DARKCYAN = [0,139,139]
 
 BLUE = [0,0,255]
+POWDERBLUE = [176,224,230]
 NAVY = [0,0,128]
 STEELBLUE = [70,130,180]
 SLATEBLUE = [106,90,205]
@@ -56,3 +59,4 @@ LIGHTGREY = [211,211,211]
 DesertTheme = Level(YELLOW , ORANGE , PERU , 2)
 DarkTheme = Level(LIGHTGREY , GREY , BLACK , 1)
 GardenTheme = Level(LAWNGREEN , SEAGREEN , DARKCYAN , 3)
+SeaTheme = Level(POWDERBLUE , DARKCYAN , NAVY, 1)
