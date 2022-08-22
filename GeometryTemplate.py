@@ -1,25 +1,23 @@
 # 0 == blank , 1 == filled
 
-from random import triangular
-
-
 cols = 20 #x
 rows = 20 #y
-grid = [[[0]*cols]*rows]
+grid = [[[0] * cols] * rows]
 
+#! could make it al inherit froma Shape class (similar variables)
 class Square():
-    def __init__(self , sideLen , anchorPoint):
+    def __init__(self , sideLen , anchorPoint = (0,0)):
         self.sideLen = sideLen
-        self.anchoirPOint = anchorPoint
-        square = [[[1]*sideLen]*sideLen]
-        
+        self.anchoirPOint = anchorPoint #tuple
+        square = [[[1] * sideLen] * sideLen]
+
 class EqualiateralTriangle():
-    def __init__(self, sideLen, anchorPoint, reverse):
+    def __init__(self, sideLen, reverse , anchorPoint = (0,0)):
         self.sideLen = sideLen
         self. anchorPoint = anchorPoint
         triangle = makeTriangle(sideLen) #2d list output
-        triangle = triangle.reverse() if reverse else triangle
-    
+        triangle = triangle.reverse() if reverse else triangle #flips verticle
+
     def makeTriangle(sideLen):
         triangle = []
         for rowNum in range(sideLen):
@@ -29,14 +27,14 @@ class EqualiateralTriangle():
             row.append([0] * (sideLen - rowNum - 1)) #right side blank
             triangle.append(row)
         return triangle
-    
+
 class RightAngleTriangle():
-    def __init__(self , sideLen , anchorPoint, reverse):
+    def __init__(self , sideLen , reverse , anchorPoint = (0,0)):
         self.sideLen = sideLen
         self. anchorPoint = anchorPoint
         triangle = makeTriangle(sideLen) #2d list output
         triangle = triangle.reverse() if reverse else triangle
-    
+
     def makeTriangle(sideLen):
         triangle = []
         rowCnt = 1
@@ -48,3 +46,14 @@ class RightAngleTriangle():
         return triangle
 
 #how would I make a decahedron??????
+
+
+
+Square1 = Square(4)
+Square2 = Square(3)
+EqualiateralTriangle1 = EqualiateralTriangle(5 , False)
+RightAngleTriangle1 = RightAngleTriangle(4, True)
+shapes = [Square1 , Square2 , EqualiateralTriangle1 , RightAngleTriangle1]
+def overlayShapes(shapes):
+    for shape in shapes:
+        #? how do i overlay them
