@@ -1,6 +1,8 @@
 
 #could also make the walls differnt depinding on the color, (brick mortar chnage, vines, cracks, )
-#floor will be dotted with the wall color randomly
+import random
+
+
 class Level():
     def __init__(self, floorColor, ridgeColor, wallColor, tier):
         self.floorColor = floorColor
@@ -9,7 +11,20 @@ class Level():
         self.tier = tier
 
     def generateGeometry():
+        pass
         #still deciding how to make the levels
+    
+    def generateLoot():
+        lootCnt = random.triangular(1 , 10 , self.tier * 2)
+        possibleLootLocations = []
+        for loot in range(lootCnt):
+            for col in range(gridXLen):
+                for row in range(gridYLen):
+                    if grid[col][row] == 1:
+                        possibleLootLocations.append((col , row)) #tuple of the coordiante of posible spot
+        lootLocations = random.choices(possibleLootLocations , None , None , lootCnt)
+        for location in lootLocations:
+            spawnLoot(location)
     
     def spawnEnemies():
         placeEnemy(mob(tier))
@@ -32,7 +47,6 @@ PERU = [205,133,63]
 
 YELLOW = [255,255,102]
 KHAKI = [240,230,140]
-LIGHTSAND = [255,235,205]
 
 GREEN = [0,128,0]
 LAWNGREEN = [124,252,0]
@@ -41,7 +55,6 @@ SEAGREEN = [46,139,87]
 DARKCYAN = [0,139,139]
 
 BLUE = [0,0,255]
-POWDERBLUE = [176,224,230]
 NAVY = [0,0,128]
 STEELBLUE = [70,130,180]
 SLATEBLUE = [106,90,205]
@@ -59,4 +72,4 @@ LIGHTGREY = [211,211,211]
 DesertTheme = Level(YELLOW , ORANGE , PERU , 2)
 DarkTheme = Level(LIGHTGREY , GREY , BLACK , 1)
 GardenTheme = Level(LAWNGREEN , SEAGREEN , DARKCYAN , 3)
-SeaTheme = Level(POWDERBLUE , DARKCYAN , NAVY, 1)
+EvilTheme = Level(SLATEBLUE , LIGHTGREY , GREY , 3)
