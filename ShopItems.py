@@ -7,6 +7,6 @@ DungeonBoosts = {
     "Strong": ["weakens all enemies (even bosses)"]
 }
 DundgeonRunnerKits = {
-    'Starter kit' = [[DungeonLootList[weapons][random.choice(range(3))]] , [DungeonLootList[armorKits][en(armorKits) % (len(armorKits) / 4)]] #pseudocode for picking the a random item from the weaapon list, number in the range will be from the rarity
+    'Starter kit' = [[DungeonLootList[weapons][random.choice(range(3))]] , [DungeonLootList[armorKits][range(len(armorKits) % (len(armorKits) / 4))]] #pseudocode for picking the a random item from the weaapon list, number in the range will be from the rarity
 #every type armor gets added to the kits
 }
