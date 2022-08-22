@@ -24,3 +24,12 @@ class mob():
             crit = random.range(1.1,1.5)
             prevHits = 0 #reset counter if crit
         player.health -= mob.weapon.damage * crit #idk how this works in python
+        '''
+        MOB TIERS
+        1: Grunt
+        2: Elite
+        3: Commander
+        4: Mythic
+        5: Boss
+        
+        '''
