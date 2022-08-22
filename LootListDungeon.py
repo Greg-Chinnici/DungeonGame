@@ -26,10 +26,10 @@ weapons = {
         "axe": [500, 10, 2, [None]],
         "sword": [300, 15, 1, [None]],
         "spear": [400, 8, 4, [None]]
-        }#{name: [durability, damage dealt, range, rate of fire (per minute),[attributes ("enchants will be  random")]]}
+        }#{name: [durability, arrow type , damage dealt, range, rate of fire (per minute),[attributes ("enchants will be  random")]]}
 rangedWeapons = {
-        "bow": [500, 6, 10, 30 ,[None]],
-        "crossbow": [300, 15, 1, 20 ,[None]],
+        "bow": [500, [None] ,6, 10, 30 ,[None]],
+        "crossbow": [300, [None] ,15, 1, 20 ,[None]],
         }
 
 
