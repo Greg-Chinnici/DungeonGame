@@ -9,13 +9,13 @@ class weapon():
  
 class mob():
     prevHits = 0
-    def __init__(self, name, theme, type, tier, health, weapon):
+    def __init__(self, name, theme, type, tier, health):
         self.name = name
         self.theme = theme
         self.type = type
         self.tier = tier #used for loot drops , chance and rarity
         self.health = health * tier #not how the scaling will work just concept
-        self.weapon = weapon #inherits the weapon
+        self.weapon = weapon(weaponList[int(abs((len(weaponList] - 1) * (tier / 4)))) #inherits the weapon, need to make the seed random but still skewed by the tier
     def attack(player):
         #crits are 1.1 to 1.5 times damage
         crit = 1
