@@ -14,6 +14,7 @@ allArmorEnchants = {
     "favored": "loot rarity += 1",
     "plentiful": "loot amount += 1",
     "hardened": "durability += 300",
+    "scurvy": "loot rarity += 1 , loot amount -= 1"
 }
 
 legendaryEnchants = {
