@@ -22,6 +22,13 @@ Little details:
     It’ll be like Tarakov and a Dungeon game combined
     To extract you will need to find or buy bird bait, a giant bird will pick you up	
     entry upgrades can be bought from the store (better loot, weaker enemies, more loot, special quests) 
+Player UI:
+    FOV silder in settings
+    Color saturation in settings
+    health ,  stamina? , majika? (limit potion use) , 
+    large inventory , sortable in multiple ways
+    hotswap armor / weapons , (type, durability)
+    
 Types of Monsters:
     almost anything from any mythology
     dugeon could have themes that only allow certain mobs to spawn (greek mythologoy, asian folklore)
