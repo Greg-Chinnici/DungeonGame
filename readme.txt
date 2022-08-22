@@ -3,6 +3,7 @@ Art style: isometric rouguelike, or 2d topdown. leaning towards isometric. pixel
 
 Generation:
     Level Geometry >> Level Color / Theme >> Level Teir >> Level Loot >> Level Spawners >> Level Mobs >> Mob Weapons
+    ***random skews can be done in pythin with random.triangular()
 
 Basic concept: 
     calm and relaxing game or occasionally terrifying
