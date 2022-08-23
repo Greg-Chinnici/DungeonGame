@@ -1,7 +1,7 @@
 # 0 == blank , 1 == filled
-
-cols = 20 #x
-rows = 20 #y
+MaxLevelSize = [100,100]
+cols = MaxLevelSize[0] #x
+rows = MaxLevelSize[1] #y
 grid = [[[0] * cols] * rows]
 
 #! could make it al inherit froma Shape class (similar variables)
@@ -47,7 +47,9 @@ class RightAngleTriangle():
 
 #how would I make a decahedron??????
 
-
+TotalShapes = randint(20)
+for shape in TotalShapes:
+    shape = random.choice([shapes]) #! Not done
 
 Square1 = Square(4)
 Square2 = Square(3)
