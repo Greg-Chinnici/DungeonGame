@@ -2,7 +2,7 @@
 #could also make the walls differnt depinding on the color, (brick mortar chnage, vines, cracks, )
 import random
 
-
+#the floor color will determine the type / theme. Types : water, fire, ice, earth, lightning. Themes: Greek, Roman, folklore.  Some mobs (grunts) can be used in multiple rooms just change the loot table per room to be effected by the tier if mob killed
 class Level():
     def __init__(self, floorColor, ridgeColor, wallColor, tier):
         self.floorColor = floorColor
