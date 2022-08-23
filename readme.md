@@ -1,11 +1,11 @@
-# H1 Art style: isometric rouguelike, or 2d topdown. leaning towards isometric. pixel art / cell shading, similar to terraria
+## Art style: isometric rouguelike, or 2d topdown. leaning towards isometric. pixel art / cell shading, similar to terraria
     [3d to pixel art render comp](https://www.youtube.com/watch?v=1FrIBkuq0ZI)
 
-# H1 Generation:
+## Generation:
     Level Geometry >> Level Color / Theme >> Level Teir >> Level Loot >> Level Spawners >> Level Mobs >> Mob Weapons
     ***random skews can be done in pythin with random.triangular()
 
-# H1 Basic concept: 
+## Basic concept: 
     calm and relaxing game or occasionally terrifying
     mostly looting, easy fights
     personal treasure room to store trophies and loot
@@ -15,7 +15,7 @@
         Bosses will be much harder 
     only way to leave a dungeon is an extraction eagle
     maybe add a gear crafting mechanic??
-# H1 Little details:
+## Little details:
     Lots of inventory space / weight for extended runs in the dungeon
     loot will be dropped from mobs and found in chests
     The farther you go from the start == better loot, or loot just scales with playtime / level
@@ -23,20 +23,20 @@
     It’ll be like Tarakov and a Dungeon game combined
     To extract you will need to find or buy bird bait, a giant bird will pick you up	
     entry upgrades can be bought from the store (better loot, weaker enemies, more loot, special quests) 
-# H1 Player UI:
+## Player UI:
     FOV silder in settings
     Color saturation in settings
     health ,  stamina? , majika? (limit potion use) , 
     large inventory , sortable in multiple ways
     hotswap armor / weapons , (type, durability)
     
-# H1 Types of Monsters:
+## Types of Monsters:
     almost anything from any mythology
     dugeon could have themes that only allow certain mobs to spawn (greek mythologoy, asian folklore)
     custom loot tables for themed dungeons
     they can eb accessed by finding a theme seal
     rooms in a regular dungeon will be themed randomly
-# H1 Level generation: (each level is its own screen, not continueous walking) #! not finalized
+## Level generation: (each level is its own screen, not continueous walking) #! not finalized
     Tile based generation
     [RPG genertator](https://donjon.bin.sh/)
     combine the outlines of multiple shapes, then distribute the room items (chests, loot, spawners)
