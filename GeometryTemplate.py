@@ -1,3 +1,4 @@
+import random
 # 0 == blank , 1 == filled
 MaxLevelSize = [100,100]
 cols = MaxLevelSize[0] #x
@@ -14,7 +15,7 @@ class Square():
 class EqualiateralTriangle():
     def __init__(self, sideLen, reverse , anchorPoint = (0,0)):
         self.sideLen = sideLen
-        self. anchorPoint = anchorPoint
+        self.anchorPoint = anchorPoint
         triangle = makeTriangle(sideLen) #2d list output
         triangle = triangle.reverse() if reverse else triangle #flips verticle
 
@@ -31,7 +32,7 @@ class EqualiateralTriangle():
 class RightAngleTriangle():
     def __init__(self , sideLen , reverse , anchorPoint = (0,0)):
         self.sideLen = sideLen
-        self. anchorPoint = anchorPoint
+        self.anchorPoint = anchorPoint
         triangle = makeTriangle(sideLen) #2d list output
         triangle = triangle.reverse() if reverse else triangle
 
@@ -45,17 +46,13 @@ class RightAngleTriangle():
             rowCnt+=1
         return triangle
 
-#how would I make a decahedron??????
+#? how would I make a decahedron??????
 
-TotalShapes = randint(20)
-for shape in TotalShapes:
-    shape = random.choice([shapes]) #! Not done
+TotalShapes = int(random.triangular(5 , 25 , 17)) #25 max shapes, 17 avg shapes
+shapes = []
+for shape in range(TotalShapes):
+    shape = random.choice([Square(random.randint(0,5)) , EqualiateralTriangle(random.randint(0,7) , (random.randint(0,4) % 2 == 0)) , RightAngleTriangle(random.randint(0,7) , (random.randint(0,4) % 2 == 0))])
+    shapes.append(shape)
 
-Square1 = Square(4)
-Square2 = Square(3)
-EqualiateralTriangle1 = EqualiateralTriangle(5 , False)
-RightAngleTriangle1 = RightAngleTriangle(4, True)
-shapes = [Square1 , Square2 , EqualiateralTriangle1 , RightAngleTriangle1]
-def overlayShapes(shapes):
-    for shape in shapes:
-        #? how do i overlay them
+for shape in shapes:
+    print(type(shape))

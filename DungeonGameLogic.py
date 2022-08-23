@@ -1,6 +1,6 @@
 #gameloop
 '''
-roosm will be stored after the player leves them so they will retain thier state if the player wants to go back 
+rooms will be stored after the player leves them so they will retain thier state if the player wants to go back 
 '''
 
 #i might want to make it change based on a radius from  the  spawn room
