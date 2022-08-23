@@ -95,3 +95,4 @@ weapons = [dagger1,
 for w in weapons:
     w.printInfo()
 
+

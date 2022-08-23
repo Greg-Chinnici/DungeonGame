@@ -1,10 +1,11 @@
 import random
-# 0 == blank , 1 == filled
+# 0 == blank , 1 == filled , 0.5 == right slope 45 degrees, -0.5 == left slope 45 degrees
 MaxLevelSize = [100,100]
 cols = MaxLevelSize[0] #x
 rows = MaxLevelSize[1] #y
 grid = [[[0] * cols] * rows]
 
+#* each tile will be displayed as a 3x3 so it will actually be 300x300
 #! could make it al inherit froma Shape class (similar variables)
 class Square():
     def __init__(self , sideLen , anchorPoint = (0,0)):
@@ -47,7 +48,18 @@ class RightAngleTriangle():
         triangle = triangle.reverse() if reverse else triangle
 
 
-#? how would I make a decahedron??????
+#? how would I make a decagon??????
+class Octogon():
+
+    def __init__(self , sideLen , anchorPoint = (0,0)):
+        sideLenOne = [[0.5,1,-0.5],[1,1,1,1,1],[-0.5,1,0,5]]
+        sideLenTwo = [[0,0.5,1,1,-0.5,0],[0.5,1,1,1,1,-0.5],[1,1,1,1,1,1],[1,1,1,1,1,1],[-0.5,1,1,1,1,0.5],[0,-0.5,1,1,0.5,0]]
+        
+        self.sideLen = sideLen 
+        self.anchorPoint = anchorPoint
+        self.octogon = sideLenOne if sideLen == 1 else sideLenTwo
+    
+        
 
 TotalShapes = int(random.triangular(5 , 25 , 17)) #25 max shapes, 17 avg shapes
 shapes = []
@@ -57,3 +69,6 @@ for num in range(TotalShapes):
 
 for shape in shapes:
     print(type(shape))
+
+octo = Octogon(2)
+print(octo.octogon)
