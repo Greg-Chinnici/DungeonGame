@@ -13,12 +13,6 @@ class Square():
         square = [[[1] * sideLen] * sideLen]
 
 class EqualiateralTriangle():
-    def __init__(self, sideLen, reverse , anchorPoint = (0,0)):
-        self.sideLen = sideLen
-        self.anchorPoint = anchorPoint
-        triangle = makeTriangle(sideLen) #2d list output
-        triangle = triangle.reverse() if reverse else triangle #flips verticle
-
     def makeTriangle(sideLen):
         triangle = []
         for rowNum in range(sideLen):
@@ -29,13 +23,13 @@ class EqualiateralTriangle():
             triangle.append(row)
         return triangle
 
-class RightAngleTriangle():
-    def __init__(self , sideLen , reverse , anchorPoint = (0,0)):
+    def __init__(self, sideLen, reverse , anchorPoint = (0,0)):
         self.sideLen = sideLen
         self.anchorPoint = anchorPoint
         triangle = makeTriangle(sideLen) #2d list output
-        triangle = triangle.reverse() if reverse else triangle
+        triangle = triangle.reverse() if reverse else triangle #flips verticle
 
+class RightAngleTriangle():
     def makeTriangle(sideLen):
         triangle = []
         rowCnt = 1
@@ -46,11 +40,18 @@ class RightAngleTriangle():
             rowCnt+=1
         return triangle
 
+    def __init__(self , sideLen , reverse , anchorPoint = (0,0)):
+        self.sideLen = sideLen
+        self.anchorPoint = anchorPoint
+        triangle = makeTriangle(sideLen) #2d list output
+        triangle = triangle.reverse() if reverse else triangle
+
+
 #? how would I make a decahedron??????
 
 TotalShapes = int(random.triangular(5 , 25 , 17)) #25 max shapes, 17 avg shapes
 shapes = []
-for shape in range(TotalShapes):
+for num in range(TotalShapes):
     shape = random.choice([Square(random.randint(0,5)) , EqualiateralTriangle(random.randint(0,7) , (random.randint(0,4) % 2 == 0)) , RightAngleTriangle(random.randint(0,7) , (random.randint(0,4) % 2 == 0))])
     shapes.append(shape)
 
