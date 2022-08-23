@@ -36,7 +36,8 @@
     custom loot tables for themed dungeons
     they can eb accessed by finding a theme seal
     rooms in a regular dungeon will be themed randomly
-# H1 Level generation: (each level is its own screen, not continueous walking) #! not finalized
+# H1 Level generation: 
+    (each level is its own screen, not continueous walking) #! not finalized
     Tile based generation
     [RPG genertator](https://donjon.bin.sh/)
     combine the outlines of multiple shapes, then distribute the room items (chests, loot, spawners)
