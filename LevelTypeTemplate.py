@@ -9,7 +9,7 @@ class Level():
         self.ridgeColor = ridgeColor
         self.wallColor = wallColor
         self.tier = tier
-
+    LevelShape = generateGeometry() #2d list?
     def generateGeometry():
         pass
         #still deciding how to make the levels
