@@ -13,12 +13,8 @@ class Level():
     def generateGeometry(self):
         pass
         #still deciding how to make the levels
-
-     def spawnLoot(self, location):
-        pass
-        self.LevelShape[location[0]][location[1]] == #! place chest or pile here, on top of the tile
-
-    def generateLoot(self):
+    
+    def generateLoot():
         lootCnt = random.triangular(1 , 10 , self.tier * 2)
         possibleLootLocations = []
         for loot in range(lootCnt): #check for possible spots

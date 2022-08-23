@@ -41,25 +41,7 @@ class RightAngleTriangle():
             rowCnt+=1
         return triangle
 
-    def __init__(self , sideLen , reverse , anchorPoint = (0,0)):
-        self.sideLen = sideLen
-        self.anchorPoint = anchorPoint
-        triangle = makeTriangle(sideLen) #2d list output
-        triangle = triangle.reverse() if reverse else triangle
-
-
-#? how would I make a decagon??????
-class Octogon():
-
-    def __init__(self , sideLen , anchorPoint = (0,0)):
-        sideLenOne = [[0.5,1,-0.5],[1,1,1,1,1],[-0.5,1,0,5]]
-        sideLenTwo = [[0,0.5,1,1,-0.5,0],[0.5,1,1,1,1,-0.5],[1,1,1,1,1,1],[1,1,1,1,1,1],[-0.5,1,1,1,1,0.5],[0,-0.5,1,1,0.5,0]]
-        
-        self.sideLen = sideLen 
-        self.anchorPoint = anchorPoint
-        self.octogon = sideLenOne if sideLen == 1 else sideLenTwo
-    
-        
+#? how would I make a decahedron??????
 
 TotalShapes = int(random.triangular(5 , 25 , 17)) #25 max shapes, 17 avg shapes
 shapes = []
