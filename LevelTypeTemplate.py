@@ -14,7 +14,7 @@ class Level():
         pass
         #still deciding how to make the levels
     
-    def generateLoot():
+    def generateLoot(self):
         lootCnt = random.triangular(1 , 10 , self.tier * 2)
         possibleLootLocations = []
         for loot in range(lootCnt):
