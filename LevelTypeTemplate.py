@@ -9,31 +9,37 @@ class Level():
         self.ridgeColor = ridgeColor
         self.wallColor = wallColor
         self.tier = tier
-    LevelShape = generateGeometry() #2d list?
-    def generateGeometry():
+        self.LevelShape = generateGeometry() #2d list?
+    def generateGeometry(self):
         pass
         #still deciding how to make the levels
-    
+
+     def spawnLoot(self, location):
+        pass
+        self.LevelShape[location[0]][location[1]] == #! place chest or pile here, on top of the tile
+
     def generateLoot(self):
         lootCnt = random.triangular(1 , 10 , self.tier * 2)
         possibleLootLocations = []
-        for loot in range(lootCnt):
+        for loot in range(lootCnt): #check for possible spots
             for col in range(gridXLen):
                 for row in range(gridYLen):
-                    if grid[col][row] == 1:
+                    if grid[col][row] == 1: #if it is the floor 
                         possibleLootLocations.append((col , row)) #tuple of the coordiante of posible spot
         lootLocations = random.choices(possibleLootLocations , None , None , lootCnt)
         for location in lootLocations:
             spawnLoot(location)
     
+
+        
     def spawnEnemies():
         placeEnemy(mob(tier))
     
-    spawnLoot(tier)
+    spawnLoot(self)
     
     enterLevel(player)
     
-
+class tile 
 #rgb, tempory for now, just showing that I want to make custom colored rooms (within reason)
 RED = [255,0,0]
 CRIMSON = [220,20,60]
@@ -46,6 +52,9 @@ TAN = [210,180,140]
 PERU = [205,133,63]
 
 YELLOW = [255,255,102]
+BLANCHEDALMOND = [255,235,205]
+BEIGE = [245,245,220]
+BURLYWOOD = [222,184,135]
 KHAKI = [240,230,140]
 
 GREEN = [0,128,0]
@@ -55,6 +64,8 @@ SEAGREEN = [46,139,87]
 DARKCYAN = [0,139,139]
 
 BLUE = [0,0,255]
+LIGHTBLUE = [173,216,230]
+CADETBLUE = [95,158,160]
 NAVY = [0,0,128]
 STEELBLUE = [70,130,180]
 SLATEBLUE = [106,90,205]
