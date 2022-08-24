@@ -14,7 +14,7 @@ class Level():
         pass
         #still deciding how to make the levels
     
-    def generateLoot():
+    def generateLoot(self):
         lootCnt = random.triangular(1 , 10 , self.tier * 2)
         possibleLootLocations = []
         for loot in range(lootCnt): #check for possible spots
@@ -35,7 +35,7 @@ class Level():
     
     enterLevel(player)
     
-class tile 
+
 #rgb, tempory for now, just showing that I want to make custom colored rooms (within reason)
 RED = [255,0,0]
 CRIMSON = [220,20,60]
