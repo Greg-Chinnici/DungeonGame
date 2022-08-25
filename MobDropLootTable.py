@@ -36,6 +36,8 @@ def sortLists():
 
 coins = {"copper": 1,"silver": 5, "gold": 10}
 GeneralLootTable = [coins] #isnt effected by type or theme
+
+
 class key():
     def __init__(self , name , opensDoor , ):
         self.name = name
