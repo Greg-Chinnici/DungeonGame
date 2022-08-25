@@ -1,5 +1,6 @@
 
 #could also make the walls differnt depinding on the color, (brick mortar chnage, vines, cracks, )
+from distutils.errors import LibError
 import random
 
 #the floor color will determine the type / theme. Types : water, fire, ice, earth, lightning. Themes: Greek, Roman, folklore.  Some mobs (grunts) can be used in multiple rooms just change the loot table per room to be effected by the tier if mob killed
@@ -35,8 +36,34 @@ class Level():
     
     enterLevel(player)
     
-
+class BossLevel():
+    def __init__(self, floorColor, ridgeColor, wallColor):
+        self.floorColor = floorColor
+        self.ridgeColor = ridgeColor
+        self.wallColor = wallColor
+        self.tier = 5
+        self.LevelShape = generateGeometry() #2d list?
+    
+    
+    def generateGeometry(self):
+        pass
+        #still deciding how to make the levels
+    
+    def generateLoot(self):
+        lootCnt = random.triangular(1 , 10 , self.tier * 2)
+        possibleLootLocations = []
+        for loot in range(lootCnt): #check for possible spots
+            for col in range(gridXLen):
+                for row in range(gridYLen):
+                    if grid[col][row] == 1: #if it is the floor 
+                        possibleLootLocations.append((col , row)) #tuple of the coordiante of posible spot
+        lootLocations = random.choices(possibleLootLocations , None , None , lootCnt)
+        for location in lootLocations:
+            spawnLoot(location)
+    
 #rgb, tempory for now, just showing that I want to make custom colored rooms (within reason)
+WHITE = [255,255,255]
+
 RED = [255,0,0]
 CRIMSON = [220,20,60]
 MAROON = [128,0,0]
@@ -80,3 +107,11 @@ DesertTheme = Level(YELLOW , ORANGE , PERU , 2)
 DarkTheme = Level(LIGHTGREY , GREY , BLACK , 1)
 GardenTheme = Level(LAWNGREEN , SEAGREEN , DARKCYAN , 3)
 EvilTheme = Level(SLATEBLUE , LIGHTGREY , GREY , 3)
+
+DeathBossRoom = BossLevel(SLATEBLUE , BLACK , LIGHTGREY)
+FireBossRoom = BossLevel(ORANGE , RED , BEIGE)
+IceBossRoom = BossLevel(LIGHTBLUE , WHITE , CADETBLUE)
+WaterBossRoom = BossLevel(BLUE , STEELBLUE , NAVY)
+
+VikingBossRoom = BossLevel(BEIGE , KHAKI , PERU)
+GreekBossRoom = BossLevel(WHITE , GREY , BEIGE)
