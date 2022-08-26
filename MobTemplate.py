@@ -39,7 +39,7 @@ class mob():
             crit = random.range(1.1,1.5)
             prevHits = 0 #reset counter if crit
         player.health -= mob.weapon.damage * crit #idk how this works in python
-        
+
 class player():
     def __init__(self , name , health , weapon = weapon(weapons[int(abs((len(weapons) - 1) * (tier / 4)))])):
         self.name = name
@@ -47,7 +47,8 @@ class player():
         self.playerWeapon = weapon 
     def attack(self):
         attackRadius = (3.14159 * self.playerWeapon.range * self.playerWeapon.range) #do i need to track positon for player and each mob?
-        if enemy in attackRadius
+        if mob in attackRadius:
+            mob.health -= weapon.damage
 '''
 MOB TIERS
 1: Grunt

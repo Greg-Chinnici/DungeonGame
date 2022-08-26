@@ -6,13 +6,17 @@ cols = MaxLevelSize[0] #x
 rows = MaxLevelSize[1] #y
 grid = [[[0] * cols] * rows]
 
+#! i dont think i need anchor points
 #* each tile will be displayed as a 3x3 so it will actually be 300x300
 #! could make it al inherit froma Shape class (similar variables)
 class Square():
     def __init__(self , sideLen , anchorPoint = (0,0)):
         self.sideLen = sideLen
-        self.anchoirPOint = anchorPoint #tuple
-        square = [[[1] * sideLen] * sideLen]
+        self.anchorPoint = anchorPoint #tuple
+        self.square = [[[1] * sideLen] * sideLen]
+
+    def newAnchorPoint(self):
+        self.anchorPoint = (random.randint(0,self.sideLen),random.randint(0,self.sideLen))
 
 class EqualiateralTriangle():
     def makeTriangle(sideLen):
@@ -51,7 +55,6 @@ class RightAngleTriangle():
 
 #? how would I make a decagon??????
 class Octogon():
-
     def __init__(self , sideLen , anchorPoint = (0,0)):
         sideLenOne = [[0.5,1,-0.5],[1,1,1,1,1],[-0.5,1,0,5]]
         sideLenTwo = [[0,0.5,1,1,-0.5,0],[0.5,1,1,1,1,-0.5],[1,1,1,1,1,1],[1,1,1,1,1,1],[-0.5,1,1,1,1,0.5],[0,-0.5,1,1,0.5,0]]
