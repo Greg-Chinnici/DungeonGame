@@ -132,6 +132,16 @@ AresBoots = armor("Ares Boots", 100, 5, 'boot')
 
 Ares = mob("Ares" , "greek" , "greek" , 5 , 250 , [AresHelm,AresChest,AresLeggings,AresBoots] ,AresSword)
 
+#Hades Kit
+hadesBattleaxe = weapon("Fiery Axe of Hellblaze" , 1000, 40, 3,  0.5, "battleaxe", [None])
+hadesHelm = armor("Hades Helm", 100, 10, 'head')
+hadesChest = armor("Hades Chest", 100, 15, 'chest')
+hadesLeggings = armor("Hades Leggings" , 100, 10, 'legging')
+hadesBoots = armor("Hades Boots", 100, 5, 'boot')
+
+Hades = mob('Hades' , 'greek' , 'death', 5, 225, [hadesHelm,hadesChest,hadesLeggings,hadesBoots], hadesBattleaxe)
+
+
+#regualr mobs
 skeleton = mob("Skeleton" , "death" , 'death' , 1 , 20 , dagger1)
 zombie = mob("Zombie" , "death" , 'death' , 1 , 25 , gauntlet1)
-
