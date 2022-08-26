@@ -60,16 +60,15 @@ class Octogon():
         self.anchorPoint = anchorPoint
         self.octogon = sideLenOne if sideLen == 1 else sideLenTwo
     
-        
+    
+
 
 TotalShapes = int(random.triangular(5 , 25 , 17)) #25 max shapes, 17 avg shapes
 shapes = []
 for num in range(TotalShapes):
-    shape = random.choice([Square(random.randint(0,5)) , EqualiateralTriangle(random.randint(0,7) , (random.randint(0,4) % 2 == 0)) , RightAngleTriangle(random.randint(0,7) , (random.randint(0,4) % 2 == 0))])
+    shape = random.choice([Square(random.randint(1,5)) , EqualiateralTriangle(random.randint(1,7) , (random.randint(1,4) % 2 == 0)) , RightAngleTriangle(random.randint(1,7) , (random.randint(1,4) % 2 == 0)) , Octogon(random.randint(1,2))])
     shapes.append(shape)
 
 for shape in shapes:
     print(type(shape))
 
-octo = Octogon(2)
-print(octo.octogon)
