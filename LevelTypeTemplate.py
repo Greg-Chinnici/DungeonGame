@@ -61,7 +61,7 @@ class BossLevel():
         for location in lootLocations:
             spawnLoot(location)
     
-#rgb, tempory for now, just showing that I want to make custom colored rooms (within reason)
+#rgb, tempory for now, just showing that I want to make custom colored rooms (within reason), these are all constants
 WHITE = [255,255,255]
 
 RED = [255,0,0]

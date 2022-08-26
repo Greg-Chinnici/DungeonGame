@@ -67,9 +67,9 @@ battleaxe1 = weapon("Stone BattleaAxe" , 700 , 18 , 2 , 0.33 , "battleaxe" ,[Non
 battleaxe2 = weapon("Iron BattleaAxe" , 800 , 21 , 2 , 0.33 , "battleaxe" ,[None])
 battleaxe3 = weapon("Steel BattleaAxe" , 950 , 23 , 3 , 0.33 , "battleaxe" ,[None])
 
-gaultlet1 = weapon("Iron Gauntlet" , 400 , 20 , 1 , 0.5 , "gauntlet" ,[None])
-gaultlet2 = weapon("Bronze Gauntlet" , 500 , 22 , 1 , 0.75 , "gauntlet" ,[None])
-gaultlet3 = weapon("Steel Gauntlet" , 600 , 25 , 1 , 1 , "gauntlet" ,[None])
+gauntlet1 = weapon("Iron Gauntlet" , 400 , 20 , 1 , 0.5 , "gauntlet" ,[None])
+gauntlet2 = weapon("Bronze Gauntlet" , 500 , 22 , 1 , 0.75 , "gauntlet" ,[None])
+gauntlet3 = weapon("Steel Gauntlet" , 600 , 25 , 1 , 1 , "gauntlet" ,[None])
 
 mace1 = weapon("Iron Mace" , 500 , 10 , 1 , 1.33 , "mace" ,[None])
 mace2 = weapon("Bronze Mace" , 650 , 15 , 1 , 1.66 , "mace" ,[None])
@@ -91,9 +91,9 @@ weapons = [dagger1,
     battleaxe1, 
     battleaxe2 ,
     battleaxe3 ,
-    gaultlet1 ,
-    gaultlet2 ,
-    gaultlet3 ,
+    gauntlet1 ,
+    gauntlet2 ,
+    gauntlet3 ,
     mace1 ,
     mace2 ,
     mace3 ,
@@ -104,3 +104,7 @@ weapons = [dagger1,
 
 AresSword = weapon("Sword of Mars" , 1000 , 30 , 2 , 1 , "sword" , [None])
 Ares = mob("Ares" , "greek" , "greek" , 5 , 250 , AresSword)
+
+skeleton = mob("Skeleton" , "death" , 'death' , 1 , 20 , dagger1)
+zombie = mob("Zombie" , "death" , 'death' , 1 , 25 , gauntlet1)
+
