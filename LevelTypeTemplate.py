@@ -1,6 +1,5 @@
 
 #could also make the walls differnt depinding on the color, (brick mortar chnage, vines, cracks, )
-from distutils.errors import LibError
 import random
 
 #the floor color will determine the type / theme. Types : water, fire, ice, earth, lightning. Themes: Greek, Roman, folklore.  Some mobs (grunts) can be used in multiple rooms just change the loot table per room to be effected by the tier if mob killed
@@ -11,6 +10,8 @@ class Level():
         self.wallColor = wallColor
         self.tier = tier
         self.LevelShape = generateGeometry() #2d list?
+        self.gridXlen = len(self.LevelShape[0])
+        self.gridYLen = len(self.LevelShape)
     def generateGeometry(self):
         pass
         #still deciding how to make the levels
@@ -19,9 +20,9 @@ class Level():
         lootCnt = random.triangular(1 , 10 , self.tier * 2)
         possibleLootLocations = []
         for loot in range(lootCnt): #check for possible spots
-            for col in range(gridXLen):
-                for row in range(gridYLen):
-                    if grid[col][row] == 1: #if it is the floor 
+            for col in range(self.gridXLen):
+                for row in range(self.gridYLen):
+                    if self.LevelShape[col][row] == 1: #if it is the floor 
                         possibleLootLocations.append((col , row)) #tuple of the coordiante of posible spot
         lootLocations = random.choices(possibleLootLocations , None , None , lootCnt)
         for location in lootLocations:
