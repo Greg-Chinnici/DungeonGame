@@ -2,7 +2,7 @@ import random
 
 weapons = []
 class weapon():
-    def __init__(self, name, durability, damage, range, attackSpeed, type, attributes):
+    def __init__(self, name, durability, damage, range, attackSpeed, type, attributes = None):
         self.name = name
         self.durability = durability
         self.damage = damage
@@ -12,15 +12,24 @@ class weapon():
         self.attributes = attributes
     def printInfo(self):
         print(f"\"{self.name}\": [{self.durability} , {self.damage} ,{self.range} , {self.attackSpeed} , \"{self.type}\", {self.attributes}]") #prints info in an easy dictionay form
- 
+
+class armor():
+    def __init__(self, name, durability, protection, slot, attributes = [None]):#do add more effectieve types (liek pokemon)?
+        self.name = name
+        self.durability = durability #the peice will delete itself if it gets below 0
+        self.protection = protection #total posible damage absorbed by each peice, it is an expoentially decreasing chance for high blockage
+        self.slot = slot #head,chest,leg,feet, hands/wrists?
+        self.attributes = attributes
+
 class mob():
     prevHits = 0
-    def __init__(self, name, theme, type, tier, health, weapon = weapon(weapons[int(abs((len(weapons) - 1) * (tier / 4)))])):
+    def __init__(self, name, theme, type, tier, health, armorList, weapon = weapon(weapons[int(abs((len(weapons) - 1) * (tier / 4)))])):
         self.name = name
         self.theme = theme
         self.type = type
         self.tier = tier #used for loot drops , chance and rarity
         self.health = health * tier #not how the scaling will work just concept
+        self.armorList = armorList #list of equiped armor, max 4
         self.weapon = weapon #inherits the weapon, need to make the seed random but still skewed by the tier
     def attack(player):
         #crits are 1.1 to 1.5 times damage
@@ -102,8 +111,26 @@ weapons = [dagger1,
     spear3
 ]
 
+helmet1 = armor("Iron Helm" , 600, 1, 'head')
+chest1 = armor('Iron Chest', 800, 4, 'chest')
+legging1 = armor('Iron Leggings', 700, 2, 'legging')
+boot1 = armor('Iron Boots', 500, 1, 'boot')
+
+armors = [
+    helmet1,
+    chest1,
+    legging1,
+    boot1
+]
+
+#* ARES KIT
 AresSword = weapon("Sword of Mars" , 1000 , 30 , 2 , 1 , "sword" , [None])
-Ares = mob("Ares" , "greek" , "greek" , 5 , 250 , AresSword)
+AresHelm = armor("Ares Helm", 100, 10, 'head')
+AresChest = armor("Ares Chest", 100, 15, 'chest')
+AresLeggings = armor("Ares Leggings" , 100, 10, 'legging')
+AresBoots = armor("Ares Boots", 100, 5, 'boot')
+
+Ares = mob("Ares" , "greek" , "greek" , 5 , 250 , [AresHelm,AresChest,AresLeggings,AresBoots] ,AresSword)
 
 skeleton = mob("Skeleton" , "death" , 'death' , 1 , 20 , dagger1)
 zombie = mob("Zombie" , "death" , 'death' , 1 , 25 , gauntlet1)
