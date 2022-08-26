@@ -78,7 +78,7 @@ shoes = {
 }
 #{name: [effects]}
 potions = {
-    "minor healing": [None],
+    "minor healing": [player.health += 10],
     "bird bait": ["spawns the bird"], #? should it be a potion or do I make a utility list?
-    "major healing": [None],
+    "major healing": [player.health += 30],
 }
