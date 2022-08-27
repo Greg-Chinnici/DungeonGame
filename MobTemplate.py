@@ -41,7 +41,7 @@ class mob():
         player.health -= mob.weapon.damage * crit #idk how this works in python
 
 class player():
-    def __init__(self , name , health , weapon = weapon(weapons[int(abs((len(weapons) - 1) * (tier / 4)))])):
+    def __init__(self , name , health , weapon):
         self.name = name
         self.health = health
         self.playerWeapon = weapon 
