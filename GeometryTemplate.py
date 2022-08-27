@@ -1,5 +1,5 @@
-
 import random
+
 # 0 == blank , 1 == filled , 0.5 == right slope 45 degrees, -0.5 == left slope 45 degrees
 MaxLevelSize = [100,100]
 cols = MaxLevelSize[0] #x
