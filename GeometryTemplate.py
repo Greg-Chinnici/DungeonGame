@@ -6,9 +6,9 @@ cols = MaxLevelSize[0] #x
 rows = MaxLevelSize[1] #y
 grid = [[[0] * cols] * rows]
 
-#!i porbably dont even a grid, picture coudl br fine, just have no idea how i would edit a photo using only code
+#! i porbably dont even a grid, picture coudl br fine, just have no idea how i would edit a photo using only code
 
-#! i dont think i need anchor points
+#! i dont think it needs anchor points
 #* each tile will be displayed as a 3x3 so it will actually be 300x300
 #! could make it al inherit froma Shape class (similar variables)
 class Square():

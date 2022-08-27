@@ -1,3 +1,4 @@
+from cmath import atan
 import random
 
 weapons = []
@@ -12,6 +13,20 @@ class weapon():
         self.attributes = attributes
     def printInfo(self):
         print(f"\"{self.name}\": [{self.durability} , {self.damage} ,{self.range} , {self.attackSpeed} , \"{self.type}\", {self.attributes}]") #prints info in an easy dictionay form
+
+class rangedWeapon():
+    def __init__(self, name, durability, damage, range, attackSpeed, type, attributes = [None]):
+        self.name = name
+        self.durability = durability
+        self.damage = damage #per each shot, #? special arrow types maybe
+        self.range = range #how far the projectile goes beofre damage falloff
+        self.attackSpeed = attackSpeed #shots per second
+        self.type = type
+        self.attributes = attributes
+    def printInfo(self):
+        print(f"\"{self.name}\": [{self.durability} , {self.damage} ,{self.range} , {self.attackSpeed} , \"{self.type}\", {self.attributes}]") #prints info in an easy dictionay form
+
+
 
 class armor():
     def __init__(self, name, durability, protection, slot, attributes = [None]):#do add more effectieve types (liek pokemon)?
@@ -111,6 +126,9 @@ weapons = [dagger1,
     spear2 ,
     spear3
 ]
+
+bow1 = rangedWeapon('Wooden Bow' , 400 , 12, 10, 1, 'bow')
+crossbow1 = rangedWeapon('Iron Crossbow' , 600 , 21, 15, 1.66, 'crossbow')
 
 helmet1 = armor("Iron Helm" , 600, 1, 'head')
 chest1 = armor('Iron Chest', 800, 4, 'chest')
