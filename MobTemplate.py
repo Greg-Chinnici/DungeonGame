@@ -64,6 +64,7 @@ class player():
         attackRadius = (3.14159 * self.playerWeapon.range * self.playerWeapon.range) #do i need to track positon for player and each mob?
         if mob in attackRadius:
             mob.health -= weapon.damage
+
 '''
 MOB TIERS
 1: Grunt
@@ -104,7 +105,8 @@ spear1 = weapon("Iron Spear" , 400 , 13 , 3 , 1 , "spear" , [None])
 spear2 = weapon("Steel Spear" , 600 , 17 , 4 , 1.33 , "spear" , [None])
 spear3 = weapon("Diamond Spear" , 800 , 22 , 5 , 1.66 , "spear" , [None])
 
-weapons = [dagger1,
+weapons = [
+    dagger1,
     dagger2,
     dagger3, 
     longsword1, 
@@ -165,3 +167,10 @@ Hades = mob('Hades' , 'greek' , 'death', 5, 225, [hadesHelm,hadesChest,hadesLegg
 skeleton = mob("Skeleton" , "death" , 'death' , 1 , 20 , [None] , dagger1)
 zombie = mob("Zombie" , "death" , 'death' , 1 , 25 , [None] , gauntlet1)
 demon = mob('demon' , "fire" , 'fire', 2, 40, [None], mace2)
+waterElemental = mob('water elemental' , 'water' , 'water', 2, 40,[None],dagger2)
+fireElemental = mob('fire elemental' , 'fire' , 'fire', 2, 40,[None],dagger2)
+
+
+
+ #? how do i make mobs use ranged weapons
+
