@@ -4,7 +4,7 @@
 
 # Generation:
    Level Geometry >> Level Color / Theme >> Level Teir >> Level Loot >> Level Spawners >> Level Mobs >> Mob Weapons
-   ***random skews can be done in pythin with random.triangular()***
+   ***random skews can be done in python with random.triangular()***
 # Basic concept: 
    calm and relaxing game or occasionally terrifying
    mostly looting, easy fights
