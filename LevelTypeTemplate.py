@@ -1,8 +1,9 @@
 
-#could also make the walls differnt depinding on the color, (brick mortar chnage, vines, cracks, )
+#could also make the walls differnt depinding on the color, (brick mortar change, vines, cracks)
 import random
 
 #the floor color will determine the type / theme. Types : water, fire, ice, earth, lightning. Themes: Greek, Roman, folklore.  Some mobs (grunts) can be used in multiple rooms just change the loot table per room to be effected by the tier if mob killed
+#* when placing the floor colors i can sloghtly change a small amount of tiles in their rgb values to make more detail
 class Level():
     def __init__(self, floorColor, ridgeColor, wallColor, tier):
         self.floorColor = floorColor
@@ -33,7 +34,7 @@ class Level():
     def spawnEnemies():
         placeEnemy(mob(tier))
     
-    spawnLoot(self)
+    generateLoot(self)
     
     enterLevel(player)
     
@@ -108,10 +109,11 @@ DesertTheme = Level(YELLOW , ORANGE , PERU , 2)
 DarkTheme = Level(LIGHTGREY , GREY , BLACK , 1)
 GardenTheme = Level(LAWNGREEN , SEAGREEN , DARKCYAN , 3)
 EvilTheme = Level(SLATEBLUE , LIGHTGREY , GREY , 3)
-GeneralDayTheme = Level(GREEN , STEELBLUE , GREY)
-MagicTheme = Level(BLUEPURPLE , SILVER , BLACK)
+MagicTheme = Level(BLUEPURPLE , SILVER , BLACK , 1)
+LightningTheme = Level(CADETBLUE , YELLOW ,  BLUEPURPLE, 2)
 
-
+GeneralDayTheme = Level(GREEN , STEELBLUE , GREY, 1)
+GeneralNightTheme = Level(CADETBLUE , NAVY ,  BLUEPURPLE, 1)
 
 DeathBossRoom = BossLevel(SLATEBLUE , BLACK , LIGHTGREY)
 FireBossRoom = BossLevel(ORANGE , RED , BEIGE)
