@@ -163,7 +163,7 @@ hadesBoots = armor("Hades Boots", 100, 5, 'boot')
 Hades = mob('Hades' , 'greek' , 'death', 5, 225, [hadesHelm,hadesChest,hadesLeggings,hadesBoots], hadesBattleaxe)
 
 
-#regualr mobs
+#regular mobs
 skeleton = mob("Skeleton" , "death" , 'death' , 1 , 20 , [None] , dagger1)
 zombie = mob("Zombie" , "death" , 'death' , 1 , 25 , [None] , gauntlet1)
 demon = mob('demon' , "fire" , 'fire', 2, 40, [None], mace2)

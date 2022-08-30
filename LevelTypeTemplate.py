@@ -108,6 +108,10 @@ DesertTheme = Level(YELLOW , ORANGE , PERU , 2)
 DarkTheme = Level(LIGHTGREY , GREY , BLACK , 1)
 GardenTheme = Level(LAWNGREEN , SEAGREEN , DARKCYAN , 3)
 EvilTheme = Level(SLATEBLUE , LIGHTGREY , GREY , 3)
+GeneralDayTheme = Level(GREEN , STEELBLUE , GREY)
+MagicTheme = Level(BLUEPURPLE , SILVER , BLACK)
+
+
 
 DeathBossRoom = BossLevel(SLATEBLUE , BLACK , LIGHTGREY)
 FireBossRoom = BossLevel(ORANGE , RED , BEIGE)
