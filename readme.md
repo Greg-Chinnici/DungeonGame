@@ -28,8 +28,8 @@
 - FOV silder in settings
 - Color saturation in settings
 - health ,  stamina? , majika? (limit potion use) , 
-- large inventory , sortable in multiple ways
-- hotswap armor / weapons , (type, durability)
+- large inventory , sortable in multiple ways (type, durability)
+- hotswap armor / weapons
    
 ## Player movemnet:
 - Walk in all directions (360)
