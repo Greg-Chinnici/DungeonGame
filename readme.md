@@ -57,11 +57,15 @@
 - minimap will show the layout and room items
 - it will pixelize the angles that are not in cardinal directions, making it possible to ad the walls and such to be right angles
 
+## Special rooms:
+- Peace Room, no mobs or loot. passively heals, safe to logout in dungeon
+- Mega Loot room, extra loot spawns no mobs
+- Boss rooms, explained earlier
+
 ## another option:
 - generate shapes on a canvas (no arrays or grid)
 - smash the shapes together to make one large polygon but maintain most edges
 - once the shape is done, add the floor color, wall color , ridge color
 - make some random dirty spots on the floor, dithering on the color of the wall
-   
 - OR use Cellular Automata, Preferred 
    - [Cellualr Automata cave generator](http://pixelenvy.ca/wa/ca_cave.html)
