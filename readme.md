@@ -32,9 +32,9 @@
 - hotswap armor / weapons , (type, durability)
    
 ## Player movemnet:
-- walk in all directions
-- dodge / slide in 45 degrees around player
-- strafe jitter is ok
+- Walk in all directions (360)
+- Dodge / slide in 45 degrees around player
+- Strafe jitter is ok
    
 # Types of Monsters:
 - monsters are referred to as mobs in most of the code
