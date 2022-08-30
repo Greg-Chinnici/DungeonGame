@@ -35,6 +35,8 @@ class armor():
         self.protection = protection #total posible damage absorbed by each peice, it is an expoentially decreasing chance for high blockage
         self.slot = slot #head,chest,leg,feet, hands/wrists?
         self.attributes = attributes
+    def printInfo(self):
+        print(f"\'{self.name}\': [{self.durability} , {self.protection} , {self.slot} , {self.attributes}]")
 
 class mob():
     prevHits = 0
