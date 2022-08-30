@@ -6,6 +6,7 @@
 - Level Geometry >> Level Color / Theme >> Level Teir >> Level Loot >> Level Spawners >> Level Mobs >> Mob Weapons
 - ***random skews can be done in python with random.triangular()***
 # Basic concept: 
+- game will be in C#, python for now becuase idk how yet
 - calm and relaxing game or occasionally terrifying
 - mostly looting, easy fights
 - personal treasure room to store trophies and loot
