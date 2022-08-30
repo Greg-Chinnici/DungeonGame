@@ -16,7 +16,10 @@ class Level():
     def generateGeometry(self):
         pass
         #still deciding how to make the levels
-    
+    def fillcolor(self):
+        for pixel in self.LevelShape:
+            shade = self.floorColor if random.randint(100) < 80 else (self.floorColor[b] += random.random.randint(-10, 10))
+            pixel = shade
     def generateLoot(self):
         lootCnt = random.triangular(1 , 10 , self.tier * 2)
         possibleLootLocations = []
