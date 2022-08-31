@@ -57,6 +57,15 @@ aresKey = key('Ares Key' , "Ares\' War Room")
 freyaKey = key('Freya Key' , 'Freya\'s Mansion')
 odinKey = key('Odin Key' , 'Odin\'s Throne Room' )
 
+class basicMobDrops():
+    def __init__(self, name, value, itemType):
+        self.name = name 
+        self.value = value #in game currency
+        self.itemType = itemType #weapon, potion ingrediant, crafting ingrident, collectable, gems
+
+    def printInfo(self):
+        print(f"{self.name}: value: {self.value} , type: {self.itemType} ")
+
 TimeBasedLootTable = {
     'day' : [],
     'night': [wedigoKey]
