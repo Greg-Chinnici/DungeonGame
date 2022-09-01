@@ -18,7 +18,7 @@ class Level():
         #still deciding how to make the levels
     def fillcolor(self):
         for pixel in self.LevelShape:
-            shade = self.floorColor if random.randint(100) < 80 else (self.floorColor[b] += random.random.randint(-10, 10))
+            shade = self.floorColor if random.randint(100) < 80 else (self.floorColor[1] += random.randint(-10, 10))# random shading
             pixel = shade
     def generateLoot(self):
         lootCnt = random.triangular(1 , 10 , self.tier * 2)
@@ -40,7 +40,7 @@ class Level():
     generateLoot(self)
     
     enterLevel(player)
-    
+
 class BossLevel():
     def __init__(self, floorColor, ridgeColor, wallColor):
         self.floorColor = floorColor

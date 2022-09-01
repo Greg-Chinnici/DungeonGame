@@ -1,4 +1,3 @@
-from cmath import atan
 import random
 
 weapons = []

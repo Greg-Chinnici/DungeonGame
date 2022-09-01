@@ -1,3 +1,4 @@
+#this these are the possible items that a mob drops when it is kiled
 types = [
     'death',
     'earth',
