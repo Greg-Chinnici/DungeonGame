@@ -51,12 +51,13 @@
 - keys can be found from themed mob drops or themed loot
 
 # Level generation: 
-- (each level is its own screen, not continueous walking) #! not finalized
+- (each level is its own screen, not continueous walking) ***not finalized***
 - Tile based generation [RPG genertator](https://donjon.bin.sh/)
 - combine the outlines of multiple shapes, then distribute the room items (chests, loot, spawners)
 - every room will have at least 3 exits 
-- minimap will show the layout and room items
-- it will pixelize the angles that are not in cardinal directions, making it possible to ad the walls and such to be right angles
+- minimap will show the layout and room items per room
+   - maybe add a large map that tracks the visited path
+- it will pixelize the angles that are not in cardinal directions, making it possible to add the walls and such to be right angles
 
 ## Special rooms:
 - Peace Room, no mobs or loot. passively heals, safe to logout in dungeon
@@ -69,4 +70,19 @@
 - once the shape is done, add the floor color, wall color , ridge color
 - make some random dirty spots on the floor, dithering on the color of the wall
 - OR use Cellular Automata, Preferred 
-   - [Cellualr Automata cave generator](http://pixelenvy.ca/wa/ca_cave.html)
+   - [Cellular Automata cave generator](http://pixelenvy.ca/wa/ca_cave.html)
+
+# Saving Game State when logging off
+- ***idk how to do any of this yet***
+- each visited room will be stored in a csv file
+   - count of exit doors in room
+   - where each exit doors lead to
+   - enemies left in room
+   - loot left in room
+   - room geometry , type and theme are stored
+   - any rooms that havent been generated wont be stored
+- player information
+   - list of everything in inventory
+   - current health
+   - current equiped items
+

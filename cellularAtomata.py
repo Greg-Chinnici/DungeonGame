@@ -1,8 +1,8 @@
 import random
 import math
 
-height = 5
-width = 5
+height = 9
+width = 9
 grid = [[0] * width] * height
 def firstFill():
     cnt = 0
