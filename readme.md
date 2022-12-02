@@ -31,6 +31,12 @@
 - health ,  stamina? , majika? (limit potion use) , 
 - large inventory , sortable in multiple ways (type, durability)
 - hotswap armor / weapons
+- minimap
+   - each room will have a color
+   - dungeon: red
+   - peace room: blue
+   - loot room: yellow
+   - boss room: purple
    
 ## Player movemnet:
 - Walk in all directions (360)
@@ -54,7 +60,7 @@
 - (each level is its own screen, not continueous walking) ***not finalized***
 - Tile based generation [RPG genertator](https://donjon.bin.sh/)
 - combine the outlines of multiple shapes, then distribute the room items (chests, loot, spawners)
-- every room will have at least 3 exits 
+- every room will have at least 3 exits, might change to keep the minimap easier to navigate
 - minimap will show the layout and room items per room
    - maybe add a large map that tracks the visited path
 - it will pixelize the angles that are not in cardinal directions, making it possible to add the walls and such to be right angles
