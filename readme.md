@@ -1,6 +1,6 @@
 # Art style:
-- isometric with voxels or 2d topdown. leaning towards isometric. pixel art / cell shading, similar to terraria
-- [3d to pixel art render comp](https://www.youtube.com/watch?v=1FrIBkuq0ZI)
+- 2d topdown. pixel art / cell shading, similar to terraria. 
+- maybe use this for better looking movements[3d to pixel art render comp](https://www.youtube.com/watch?v=1FrIBkuq0ZI)
 
 # Generation:
 - Level Geometry >> Level Color / Theme >> Level Teir >> Level Loot >> Level Spawners >> Level Mobs >> Mob Weapons
