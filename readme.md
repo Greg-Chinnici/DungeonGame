@@ -71,7 +71,7 @@
    - octogon?
 - The sheet will have VERY ugly colors
    - this is so they can be replaced depending on the level type
-   - replacing the colors [example]("https://www.youtube.com/watch?v=HsOKwUwL1bE)
+   - replacing the colors [example]("https://www.youtube.com/watch?v=HsOKwUwL1bE")
 - the different colors that are needed
    - floor color
    - ridge color
