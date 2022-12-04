@@ -11,6 +11,8 @@ grid = [[[0] * cols] * rows]
 #! i dont think it needs anchor points
 #* each tile will be displayed as a 3x3 so it will actually be 300x300
 #! could make it al inherit froma Shape class (similar variables)
+
+'''
 class Square():
     def __init__(self , sideLen , anchorPoint = (0,0)):
         self.sideLen = sideLen
@@ -65,7 +67,43 @@ class Octogon():
         self.anchorPoint = anchorPoint
         self.octogon = sideLenOne if sideLen == 1 else sideLenTwo
     
+'''
+
+#* should ahvea access to the entire level grid
+class ShapeBase():
+    def __init__(self, anchorPoints, radius):
+        self.m_anchorPoints = anchorPoints
+        self.m_anchorPointx = anchorPoints[0]
+        self.m_anchorPointx = anchorPoints[1]
+        
+        self.m_radius = radius
     
+    def makeShape():
+        pass
+    
+    def checkBounds(m_anchorPointx, m_anchorPointy , m_radius):
+        if m_anchorPointx - m_radius < 0:
+            return False
+        if m_anchorPointx + m_radius > 100:
+            return False
+        if m_anchorPointy - m_radius < 0:
+            return False
+        if m_anchorPointy + m_radius > 100:
+            return False
+        
+        return True
+        
+class sqaure(ShapeBase):
+    def __init__(self, anchorPoints, radius):
+        super().__init__(anchorPoints, radius)
+        
+    def makeShape():
+        if !ShapeBase.checkBounds():
+            return
+    
+    
+        
+
 
 
 TotalShapes = int(random.triangular(5 , 25 , 17)) #25 max shapes, 17 avg shapes
