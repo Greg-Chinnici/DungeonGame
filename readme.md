@@ -1,5 +1,6 @@
 # Art style:
 - 2d topdown. pixel art / cell shading, similar to terraria. 
+- MAYBE 2.5d?
 - maybe use this for better looking movements[3d to pixel art render comp](https://www.youtube.com/watch?v=1FrIBkuq0ZI)
 
 # Generation:
