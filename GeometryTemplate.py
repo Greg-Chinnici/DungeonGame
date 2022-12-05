@@ -108,21 +108,17 @@ class square(ShapeBase):
         if not checkBounds():
             return
         
-        colInShape = 0
-        rowInShape = 0
-        while colInShape < (m_boundingBoxSize * m_boundingBoxSize): # total area to fill, if even number it it centered in the preferred top left spot
-            if colInShape % m_boundingBoxSize:
-                rowInShape += 1
+    
+        for rowInShape in range(m_boundingBoxSize):
+            for colInShape in range(m_boundingBoxSize):
+                placeY = rowInShape + m_anchorPointy
+                placeX = colInShape + m_anchorPointx
                 
-            placeY = rowInShape + m_anchorPointy
-            placeX = colInShape + m_anchorPointx
-            
-            grid[placeY][placeX] = '+' #if anchor point is top left of shape box 
-            
-            colInShape += 1
+                grid[placeY][placeX] = '+' #if anchor point is top left of shape box 
+    
             
 
-class rightTriangle(ShapeBase):
+class rightTriangleCornerBottomLeft(ShapeBase):
     def __init__(self, anchorPoints, boundingBoxSize):
         super().__init__(anchorPoints, boundingBoxSize)
         
@@ -140,20 +136,43 @@ class rightTriangle(ShapeBase):
         if not checkBounds():
             return
         
-        colInShape = 0
-        rowInShape = 0
-        while colInShape < (m_boundingBoxSize * m_boundingBoxSize): # total area to fill, if even number it it centered in the preferred top left spot
-            if colInShape % m_boundingBoxSize:
-                rowInShape += 1
+        for rowInShape in range(m_boundingBoxSize):
+            for colInShape in range(m_boundingBoxSize):
+                placeY = rowInShape + m_anchorPointy
+                placeX = colInShape + m_anchorPointx
+                
+                if placeY >= placeX: #! fix th triangle rules
+                    grid[placeY][placeX] = '+' #if right triangle corner in bottom left
             
-            placeY = rowInShape + m_anchorPointy
-            placeX = colInShape + m_anchorPointx
-            if placeY >= placeX:
-                grid[placeY][placeX] = '+' #if right triangle corner in bottom left
+
+class rightTriangleCornerBottomRight(ShapeBase):
+    def __init__(self, anchorPoints, boundingBoxSize):
+        super().__init__(anchorPoints, boundingBoxSize)
+        
+    '''
+    ++#
+    +##
+    ###
+    '''
+    
+    
+   
+    def makeShape(m_anchorPointx, m_anchorPointy , m_boundingBoxSize):
+        def checkBounds(self):
+            super().checkBounds()
+
+        if not checkBounds():
+            return
+        
+        for rowInShape in range(m_boundingBoxSize):
+            for colInShape in range(m_boundingBoxSize):
+                placeY = rowInShape + m_anchorPointy
+                placeX = colInShape + m_anchorPointx
+                
+                if placeX >= placeY: #! fix th triangle rules
+                    grid[placeY][placeX] = '+' #if right triangle corner in bottom left
             
-            colInShape += 1
-            
-class rightTriangleRotated180(ShapeBase):
+class rightTriangleCornerTopRight(ShapeBase):
     def __init__(self, anchorPoints, boundingBoxSize):
         super().__init__(anchorPoints, boundingBoxSize)
     
@@ -171,17 +190,39 @@ class rightTriangleRotated180(ShapeBase):
         
         colInShape = 0
         rowInShape = 0
-        while colInShape < (m_boundingBoxSize * m_boundingBoxSize): # total area to fill, if even number it it centered in the preferred top left spot
-            if colInShape % m_boundingBoxSize:
-                rowInShape += 1
-            
-            placeY = rowInShape + m_anchorPointy
-            placeX = colInShape + m_anchorPointx
-            if placeY <= placeX:
-                grid[placeY][placeX] = '+' #if right triangle corner in bottom left
-            
-            colInShape += 1
+        for rowInShape in range(m_boundingBoxSize):
+            for colInShape in range(m_boundingBoxSize):
+                placeY = rowInShape + m_anchorPointy
+                placeX = colInShape + m_anchorPointx
+                
+                if placeY >= placeX: #! fix th triangle rules
+                    grid[placeY][placeX] = '+' #if right triangle corner in bottom left
     
+class rightTriangleCornerTopLeft(ShapeBase):
+    def __init__(self, anchorPoints, boundingBoxSize):
+        super().__init__(anchorPoints, boundingBoxSize)
+    
+    '''
+    ##
+    #+
+    '''
+   
+    def makeShape(m_anchorPointx, m_anchorPointy , m_boundingBoxSize):
+        def checkBounds(self):
+            super().checkBounds()
+
+        if not checkBounds():
+            return
+        
+        colInShape = 0
+        rowInShape = 0
+        for rowInShape in range(m_boundingBoxSize):
+            for colInShape in range(m_boundingBoxSize):
+                placeY = rowInShape + m_anchorPointy
+                placeX = colInShape + m_anchorPointx
+                
+                if placeY <= placeX: #! fix th triangle rules
+                    grid[placeY][placeX] = '+' #if right triangle corner in bottom left
     
 #* helpers
 
