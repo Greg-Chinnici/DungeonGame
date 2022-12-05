@@ -8,6 +8,8 @@ grid = [[[0] * cols] * rows]
 
 #! i porbably dont even a grid, picture coudl br fine, just have no idea how i would edit a photo using only code
 
+#* anchor points are defined as the top left forner box of the shape, NOT THE CENTER
+
 #! i dont think it needs anchor points
 #* each tile will be displayed as a 3x3 so it will actually be 300x300
 #! could make it al inherit froma Shape class (similar variables)
@@ -71,47 +73,129 @@ class Octogon():
 
 #* should ahvea access to the entire level grid
 class ShapeBase():
-    def __init__(self, anchorPoints, radius):
+    def __init__(self, anchorPoints, boundingBoxSize):
         self.m_anchorPoints = anchorPoints
         self.m_anchorPointx = anchorPoints[0]
         self.m_anchorPointx = anchorPoints[1]
         
-        self.m_radius = radius
+        self.m_boundingBoxSize = boundingBoxSize
     
     def makeShape():
         pass
     
-    def checkBounds(m_anchorPointx, m_anchorPointy , m_radius):
-        if m_anchorPointx - m_radius < 0:
+    def checkBounds(self):
+        if self.m_anchorPointx - self.m_boundingBoxSize < 0:
             return False
-        if m_anchorPointx + m_radius > 100:
+        if self.m_anchorPointx + self.m_boundingBoxSize > 99:
             return False
-        if m_anchorPointy - m_radius < 0:
+        if self.m_anchorPointy - self.m_boundingBoxSize < 0:
             return False
-        if m_anchorPointy + m_radius > 100:
+        if self.m_anchorPointy + self.m_boundingBoxSize > 99:
             return False
         
         return True
         
-class sqaure(ShapeBase):
-    def __init__(self, anchorPoints, radius):
-        super().__init__(anchorPoints, radius)
-        
-    def makeShape():
-        if !ShapeBase.checkBounds():
+class square(ShapeBase):
+    def __init__(self, anchorPoints, boundingBoxSize):
+        super().__init__(anchorPoints, boundingBoxSize)
+    
+    
+   
+    def makeShape(m_anchorPointx, m_anchorPointy , m_boundingBoxSize):
+        def checkBounds(self):
+            super().checkBounds()
+
+        if not checkBounds():
             return
+        
+        colInShape = 0
+        rowInShape = 0
+        while colInShape < (m_boundingBoxSize * m_boundingBoxSize): # total area to fill, if even number it it centered in the preferred top left spot
+            if colInShape % m_boundingBoxSize:
+                rowInShape += 1
+                
+            placeY = rowInShape + m_anchorPointy
+            placeX = colInShape + m_anchorPointx
+            
+            grid[placeY][placeX] = '+' #if anchor point is top left of shape box 
+            
+            colInShape += 1
+            
+
+class rightTriangle(ShapeBase):
+    def __init__(self, anchorPoints, boundingBoxSize):
+        super().__init__(anchorPoints, boundingBoxSize)
+        
+    '''
+    #+
+    ##
+    '''
     
     
+   
+    def makeShape(m_anchorPointx, m_anchorPointy , m_boundingBoxSize):
+        def checkBounds(self):
+            super().checkBounds()
+
+        if not checkBounds():
+            return
+        
+        colInShape = 0
+        rowInShape = 0
+        while colInShape < (m_boundingBoxSize * m_boundingBoxSize): # total area to fill, if even number it it centered in the preferred top left spot
+            if colInShape % m_boundingBoxSize:
+                rowInShape += 1
+            
+            placeY = rowInShape + m_anchorPointy
+            placeX = colInShape + m_anchorPointx
+            if placeY >= placeX:
+                grid[placeY][placeX] = '+' #if right triangle corner in bottom left
+            
+            colInShape += 1
+            
+class rightTriangleRotated180(ShapeBase):
+    def __init__(self, anchorPoints, boundingBoxSize):
+        super().__init__(anchorPoints, boundingBoxSize)
+    
+    '''
+    ##
+    +#
+    '''
+   
+    def makeShape(m_anchorPointx, m_anchorPointy , m_boundingBoxSize):
+        def checkBounds(self):
+            super().checkBounds()
+
+        if not checkBounds():
+            return
+        
+        colInShape = 0
+        rowInShape = 0
+        while colInShape < (m_boundingBoxSize * m_boundingBoxSize): # total area to fill, if even number it it centered in the preferred top left spot
+            if colInShape % m_boundingBoxSize:
+                rowInShape += 1
+            
+            placeY = rowInShape + m_anchorPointy
+            placeX = colInShape + m_anchorPointx
+            if placeY <= placeX:
+                grid[placeY][placeX] = '+' #if right triangle corner in bottom left
+            
+            colInShape += 1
+    
+    
+#* helpers
+
+def printOutGrid():
+    for row in grid:
+        print(row)
         
 
 
 
+'''
 TotalShapes = int(random.triangular(5 , 25 , 17)) #25 max shapes, 17 avg shapes
 shapes = []
 for num in range(TotalShapes):
     shape = random.choice([Square(random.randint(1,5)) , EqualiateralTriangle(random.randint(1,7) , (random.randint(1,4) % 2 == 0)) , RightAngleTriangle(random.randint(1,7) , (random.randint(1,4) % 2 == 0)) , Octogon(random.randint(1,2))])
     shapes.append(shape)
-
-for shape in shapes:
-    print(type(shape))
-
+'''
